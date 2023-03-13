@@ -1,0 +1,61 @@
+:root {
+    --bg-color: #2a3d81;
+    --base-color: #6a93cb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background: var(--bg-color);
+    position: relative;
+}
+
+.flower {
+    width: 250px;
+    height: 250px;
+    background: var(--base-color);
+    border-radius: 100%;
+}
+
+.circle {
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    border: 20px solid var(--bg-color);
+    border-radius: 100%;
+}
+
+.circle1 {
+    left: 8%;
+}
+
+.circle2 {
+    right: 8%;
+}
+
+.circle3 {
+    top: 60px;
+    right: 28%;
+}
+
+.circle4 {
+    bottom: 60px;
+    right: 28%;   
+}

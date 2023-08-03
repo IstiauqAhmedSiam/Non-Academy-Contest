@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-color: rgb(6, 50, 63);
+    --primary-color: rgb(255, 222, 0);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    background: var(--base-color);
+    width: 564px;
+    height: 423px;
+}
+
+.box {
+    width: 363px;
+    height: 169px;
+    border: 13px solid var(--primary-color);
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px 22px var(--primary-color);
+    position: relative
+}
+
+.box:before,
+.box:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 50px;
+    border-radius: 5px 0 0 5px;
+    background: var(--primary-color);
+}
+
+.box:before {
+    left: -41px;
+}
+
+.box:after {
+    right: -57px;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.box .content {
+    width: 280px;
+    height: calc(100% + 70px);
+    background: var(--base-color);
+}
+
+.knife {
+    flex-direction: column;
+    position: fixed;
+    left: 51%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 2;
+}
+
+.left-knife {
+    left: 46%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    position: relative;
+    z-index: 0;
+}
+
+.knife.left-knife:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 43.5%;
+    transform: translate(-50%, -50%);
+    height: 69px;
+    width: 50px;
+    background: var(--base-color);
+    z-index: 1;
+}
+
+.knife .upper_part {
+    width: 43px;
+    height: 190px;
+    background: var(--primary-color);
+    position: relative;
+}
+
+.upper_part:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-left: 21.5px solid transparent;
+    border-right: 21.5px solid transparent;
+    border-bottom: 21.5px solid var(--primary-color);
+    top: -5.1%;
+    left: 0;
+    transform: translate(0%, -50%);
+}
+
+.knife .middle_part {
+    width: 115px;
+    height: 30px;
+    background: var(--primary-color);
+}
+
+.knife .lower_part {
+    width: 30px;
+    height: 63px;
+    background: var(--primary-color);
+    border-radius: 0 0 12px 12px;
+}

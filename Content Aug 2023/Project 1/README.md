@@ -1,4 +1,4 @@
-![contact us form](./Q1 .png)
+![image](./Q1 .png)
 
 **Challenge Title**
 Clone design
